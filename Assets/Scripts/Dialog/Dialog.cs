@@ -8,9 +8,15 @@ using UnityEngine.UI;
 public class Dialog : MonoBehaviour
 {
     #region Variable
-    [Header("Variable")]
+    [Header("Localization")] 
+    public DialogData dialogData;
+    public NameData nameData;
+    public string[] lineKey;
+    public string[] nameKey;
     public TextMeshProUGUI textComponent;
     public TextMeshProUGUI textNames;
+
+    [Header("Variable")]
     public TextMeshProUGUI textContinue;
     public Image imageContinue;
     public bool _isChoice = false;
@@ -27,9 +33,6 @@ public class Dialog : MonoBehaviour
     public GameObject Choice_2;
     public GameObject Choice_3;
 
-    [TextArea(3,10)]
-    public string[] lines;
-    public string[] names;
     public float textSpeed;
     public bool _isTyping = false;
     public bool _isChoiceFinished = false;
@@ -41,8 +44,8 @@ public class Dialog : MonoBehaviour
     private void Start()
     {
         SoundManager.instance.PlaySfx(SoundManager.instance.dialogClip);
-        textComponent.text = string.Empty;
-        textNames.text = string.Empty;
+        LocalizationManager.instance.Load(dialogData);
+        LocalizationManager.instance.LoadName(nameData);
         _isChoice = false;
 
         soundmanager = SoundManager.instance;
@@ -52,7 +55,7 @@ public class Dialog : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(textComponent.text == lines[index] && textNames.text == names[index] && _isChoice == false) 
+            if(textComponent.text == LocalizationManager.instance.GetText(lineKey[index]) && textNames.text == LocalizationManager.instance.GetText(nameKey[index]) && _isChoice == false) 
             {
                 if (_showNextChoice)
                 {
@@ -80,12 +83,12 @@ public class Dialog : MonoBehaviour
             else
             {
                 StopAllCoroutines();
-                textComponent.text = lines[index];
-                textNames.text = names[index];
+                textComponent.text = LocalizationManager.instance.GetText(lineKey[index]);
+                textNames.text = LocalizationManager.instance.GetText(nameKey[index]);
                 _isTyping = false;
             }
         }
-        if(textComponent.text == lines[index])
+        if (textComponent.text == LocalizationManager.instance.GetText(lineKey[index]))
         {
             //textContinue.gameObject.SetActive(true);
             imageContinue.gameObject.SetActive(true);
@@ -115,37 +118,27 @@ public class Dialog : MonoBehaviour
     {
         textComponent.text = string.Empty;
         textNames.text = string.Empty;
-        textNames.text = names[index];
+        textNames.text = LocalizationManager.instance.GetText(nameKey[index]); 
+        string line = LocalizationManager.instance.GetText(lineKey[index]);
+        foreach (char c in line.ToCharArray()) 
+        { 
+            textComponent.text += c; 
+            yield return new WaitForSeconds(0.05f); 
+        }
 
         _isTyping = true;
 
         //soundmanager.dialogueSource.Stop();
         //soundmanager.PlayDialogue(soundmanager.dialogue);
-
-        int maxLength = Mathf.Max(names[index].Length, lines[index].Length);
-        for (int i = 0; i < maxLength; i++) 
-        {
-            //if(i < names[index].Length)
-            //{
-            //    textNames.text += names[index][i];
-            //}
-            if(i < lines[index].Length) 
-            {
-                textComponent.text += lines[index][i];
-            }
-            yield return new WaitForSeconds(textSpeed);
-        }
         _isTyping = false;
         //soundmanager.dialogueSource.Stop();
     }
     public void NextLine()
     {
         SoundManager.instance.PlaySfx(SoundManager.instance.dialogClip);
-        if(index < lines.Length - 1)
+        if(index < lineKey.Length - 1)
         {
             index++;
-            textComponent.text = string.Empty;
-            UpdateName();
             StartCoroutine(TypeLine());
             if(index == 4)
             {
@@ -156,18 +149,13 @@ public class Dialog : MonoBehaviour
             {
                 daraIMG1.SetActive(true);
             }
-
         }
     }
     void UpdateName()
     {
-        if(index < names.Length) 
+        if (index < nameKey.Length) 
         {
-            textNames.text = names[index];
-        }
-        else 
-        {
-            textNames.text = string.Empty;
+            textNames.text = LocalizationManager.instance.GetText(nameKey[index]); 
         }
     }
 }

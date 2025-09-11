@@ -1708,6 +1708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: 
   level: 0
+  phase: 0
   buttonContinue: {fileID: 0}
 --- !u!114 &821412335
 MonoBehaviour:
@@ -1723,6 +1724,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playercontroller: {fileID: 0}
   playerhealth: {fileID: 0}
+  scoreManager: {fileID: 0}
+  inventory: {fileID: 0}
+  itemsSpritePairs: []
+  phase: 0
 --- !u!4 &821412336
 Transform:
   m_ObjectHideFlags: 0
@@ -2834,6 +2839,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f47eadf5e35914db05fd111745bd18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogData: {fileID: 11400000, guid: 31b3a90029d8d0b469a4956c070e7304, type: 2}
+  nameData: {fileID: 11400000, guid: 5438765a6eba76442b0015a75dd41620, type: 2}
+  lineKey:
+  - Dialog1_0
+  - Dialog1_1
+  - Dialog1_2
+  - Dialog1_3
+  - Dialog1_4
+  - Dialog1_5
+  - Dialog1_6
+  - Dialog1_7
+  - Dialog1_8
+  - Dialog1_9
+  - Dialog1_10
+  - Dialog1_11
+  - Dialog1_12
+  - Dialog1_13
+  - Dialog1_14
+  - Dialog1_15
+  - Dialog1_16
+  nameKey:
+  - Name_Narration
+  - Name_Tawan
+  - Name_Tawan
+  - Name_Tawan
+  - Name_Narration
+  - Name_???
+  - Name_Tawan
+  - Name_Narration
+  - Name_???
+  - Name_Narration
+  - Name_Tawan
+  - Name_Dara
+  - Name_Narration
+  - Name_Dara
+  - Name_Narration
+  - Name_Dara
+  - Name_Dara
   textComponent: {fileID: 1955759099}
   textNames: {fileID: 444771554}
   textContinue: {fileID: 200164740}
@@ -2847,48 +2890,6 @@ MonoBehaviour:
   Choice_1: {fileID: 1751400197}
   Choice_2: {fileID: 749489954}
   Choice_3: {fileID: 794064422}
-  lines:
-  - "In the midst of a lively Bangkok morning, under the clear sky of the Songkran
-    festival\u2026"
-  - "It's so hot today... \r\n\n"
-  - 'I was planning to do some overtime, but my boss kicked me out to take a break
-    for Songkran.
-
-'
-  - But... I guess it's good to take a break from work once in a while.
-  - As Tawan strolls through the streets, enjoying the holiday, he suddenly notices
-    something unusual.
-  - Stay away from me!
-  - "Huh\u2026? What\u2019s going on over there? Is someone being bullied?"
-  - Suddenly, a pair of eyes from the mysterious voice lock onto Tawan.
-  - "You\u2026 you can see me?"
-  - The voice's owner hastily approaches Tawan.
-  - Whoa! Who are you?!
-  - I am Dara, a guardian spirit who protects the peace during the Songkran festival.
-  - While Tawan stands confused, the two harassing Dara approach with rage.
-  - "There\u2019s no time to explain! I\u2019ll tell you everything later, but right
-    now, follow my lead!"
-  - So..... what do you do
-  - "Huh!? You\u2019re really not gonna help?!"
-  - "You\u2019re so mean! Please, help me! Pleeease!"
-  names:
-  - 
-  - Tawan
-  - Tawan
-  - Tawan
-  - 
-  - ???
-  - Tawan
-  - 
-  - ???
-  - 
-  - Tawan
-  - Dara
-  - 
-  - Dara
-  - 
-  - Dara
-  - Dara
   textSpeed: 0.05
   _isTyping: 0
   _isChoiceFinished: 0
@@ -3035,6 +3036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1737227504}
   - component: {fileID: 1737227503}
+  - component: {fileID: 1737227505}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3073,6 +3075,19 @@ Transform:
   - {fileID: 1491546658}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1737227505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737227502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60bde8baad472a49a96389f4e4d32f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLanguage: 0
 --- !u!1 &1751400197
 GameObject:
   m_ObjectHideFlags: 0

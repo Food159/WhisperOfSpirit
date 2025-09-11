@@ -6,6 +6,13 @@ using UnityEngine.SceneManagement;
 public class ChoiceManager : MonoBehaviour
 {
     public Dialog dialog;
+    private void Awake()
+    {
+        if (dialog == null)
+        {
+            dialog = FindObjectOfType<Dialog>();
+        }
+    }
     public void OnButtonNo()
     {
         SoundManager.instance.PlaySfx(SoundManager.instance.choiceSelectedClip);
