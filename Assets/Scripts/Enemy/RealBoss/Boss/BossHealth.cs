@@ -12,6 +12,7 @@ public class BossHealth : MonoBehaviour
     [SerializeField] GameObject hpRegenPrefabs;
     private float nextSpawnThreshold;
     public BossPhase phase;
+    bool change = false;
     private void Start()
     {
         if (isDead)
@@ -34,10 +35,12 @@ public class BossHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         if(phase == BossPhase.phase1)
         {
-            if (currentHealth <= maxHealth * 0.35f)
+            if (currentHealth <= maxHealth * 0.35f && !change)
             {
+                change = true;
+                GameDataHandler.instance.SaveDataBoss();
                 SceneController.instance.LoadSceneIndex(SceneManager.GetActiveScene().buildIndex + 1);
-                Debug.Log("NS");
+                GameDataHandler.instance.LoadDataBoss();
             }
         }
         if(currentHealth <= nextSpawnThreshold && !isDead)

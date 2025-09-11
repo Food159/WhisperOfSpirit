@@ -2876,6 +2876,9 @@ MonoBehaviour:
   playercontroller: {fileID: 0}
   playerhealth: {fileID: 0}
   scoreManager: {fileID: 0}
+  inventory: {fileID: 0}
+  itemsSpritePairs: []
+  phase: 0
 --- !u!114 &135654194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2890,6 +2893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scene: 
   level: 1
+  phase: 0
   buttonContinue: {fileID: 0}
 --- !u!1 &141582848
 GameObject:
@@ -9155,7 +9159,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletpool: {fileID: 1455335310}
   shootingPoint: {fileID: 155112627}
+  bulletSpeed: 10
   waterammo: 1
+  waterReload: 1.25
 --- !u!114 &555515637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9511,6 +9517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 587122354}
   - component: {fileID: 587122353}
+  - component: {fileID: 587122355}
   m_Layer: 0
   m_Name: \GameManager_Dontdestroy
   m_TagString: Untagged
@@ -9549,6 +9556,19 @@ Transform:
   - {fileID: 1044921442}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &587122355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587122352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60bde8baad472a49a96389f4e4d32f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentLanguage: 0
 --- !u!1 &596840549
 GameObject:
   m_ObjectHideFlags: 0
@@ -10605,6 +10625,7 @@ MonoBehaviour:
   leveltrack: 1
   minigame1: {fileID: 496701142}
   minigame2: {fileID: 0}
+  minigame3: {fileID: 0}
 --- !u!114 &661356641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12576,6 +12597,7 @@ MonoBehaviour:
   leveltrack: 1
   minigame1: {fileID: 496701142}
   minigame2: {fileID: 0}
+  minigame3: {fileID: 0}
 --- !u!114 &820010931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19463,6 +19485,8 @@ MonoBehaviour:
   pointcheckScript: {fileID: 496701142}
   iceGame: {fileID: 0}
   icewaterScript: {fileID: 0}
+  ipadGame: {fileID: 0}
+  ipadScript: {fileID: 0}
   _isBossDie: 0
 --- !u!1 &1145115267
 GameObject:
@@ -24186,6 +24210,7 @@ MonoBehaviour:
   leveltrack: 1
   minigame1: {fileID: 496701142}
   minigame2: {fileID: 0}
+  minigame3: {fileID: 0}
 --- !u!114 &1365651408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34762,7 +34787,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletpool: {fileID: 1455335310}
   shootingPoint: {fileID: 1189468194}
+  bulletSpeed: 10
   waterammo: 1
+  waterReload: 1.25
 --- !u!114 &2047390217
 MonoBehaviour:
   m_ObjectHideFlags: 0

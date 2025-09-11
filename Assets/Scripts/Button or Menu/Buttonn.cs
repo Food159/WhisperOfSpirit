@@ -15,6 +15,7 @@ public class Buttonn : MonoBehaviour
         Time.timeScale = 1;
         SceneController.instance.LoadSceneName("SceneGameBoss");
         GameDataHandler.instance.LoadData();
+        GameDataHandler.instance.ClearDataBoss();
     }
     public void OnButtonRestart()
     {

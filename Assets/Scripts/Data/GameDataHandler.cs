@@ -47,24 +47,52 @@ public class GameDataHandler : MonoBehaviour
     }
     private void Start()
     {
-        
-        PlayerGameData gamedata = LoadData();
-        if(gamedata != null)
+        if (phase == BossPhase.phase1)
         {
-            playerhealth.currentHealth = gamedata.playerHp;
-            if(scoreManager != null)
+            PlayerGameData gamedata = LoadData();
+            if (gamedata != null)
             {
-                scoreManager.score = gamedata.playerScore;
-            }
-            foreach(ItemsType type in gamedata.inventoryItems)
-            {
-                if(type != ItemsType.none && inventory != null)
+                if(playerhealth != null)
                 {
-                    Sprite itemSprite = GetSpriteFromType(type);
-                    inventory.AddItems(itemSprite, type);
+                    playerhealth.currentHealth = gamedata.playerHp;
+                }
+                if (scoreManager != null)
+                {
+                    scoreManager.score = gamedata.playerScore;
+                }
+                foreach (ItemsType type in gamedata.inventoryItems)
+                {
+                    if (type != ItemsType.none && inventory != null)
+                    {
+                        Sprite itemSprite = GetSpriteFromType(type);
+                        inventory.AddItems(itemSprite, type);
+                    }
                 }
             }
         }
+        else if (phase == BossPhase.phase2)
+        {
+            PlayerGameData gamedataP2 = LoadDataBoss();
+            if(gamedataP2 != null) 
+            {
+                if (playerhealth != null)
+                {
+                    playerhealth.currentHealth = gamedataP2.playerHp;
+                }
+                if (scoreManager != null)
+                {
+                    scoreManager.score = gamedataP2.playerScore;
+                }
+                foreach (ItemsType type in gamedataP2.inventoryItems)
+                {
+                    if (type != ItemsType.none && inventory != null)
+                    {
+                        Sprite itemSprite = GetSpriteFromType(type);
+                        inventory.AddItems(itemSprite, type);
+                    }
+                }
+            }
+        } 
     }
     private void Update()
     {
@@ -77,6 +105,7 @@ public class GameDataHandler : MonoBehaviour
             ClearData();
         }
     }
+
     public void SaveData()
     {
         if (phase == BossPhase.phase2)
@@ -86,7 +115,6 @@ public class GameDataHandler : MonoBehaviour
             Directory.CreateDirectory(Application.dataPath);
         }
         PlayerGameData gamedata = new PlayerGameData();
-        //gamedata.playerPos = playercontroller.transform.position;
         gamedata.playerHp = playerhealth.currentHealth;
         if(scoreManager != null)
         {
@@ -100,13 +128,12 @@ public class GameDataHandler : MonoBehaviour
                 gamedata.inventoryItems.Add(inventory.GetItemType(i));
             }
         }
-        
-        //gamedata.playerDied = playerhealth._isPlayerDead;
 
         string gameDataJson = JsonUtility.ToJson(gamedata);
         File.WriteAllText(Application.dataPath + "/gameData.json", gameDataJson);
         Debug.Log("Save game data");
     }
+
     public PlayerGameData LoadData()
     {
         if (File.Exists(Application.dataPath + "/gameData.json") == false)
@@ -118,9 +145,48 @@ public class GameDataHandler : MonoBehaviour
         Debug.Log("LoadData");
         return loadedGameData;
     }
+    public PlayerGameData LoadDataBoss()
+    {
+        if (File.Exists(Application.dataPath + "/gameDataPhase1.json") == false)
+        {
+            return null;
+        }
+        string loadedGameDataToJson = File.ReadAllText(Application.dataPath + "/gameDataPhase1.json");
+        PlayerGameData loadedGameData = JsonUtility.FromJson<PlayerGameData>(loadedGameDataToJson);
+        Debug.Log("LoadDataPhase1");
+        return loadedGameData;
+    }
+    public void SaveDataBoss()
+    {
+        if (phase == BossPhase.phase2)
+            return;
+        if (Directory.Exists(Application.dataPath) == false)
+        {
+            Directory.CreateDirectory(Application.dataPath);
+        }
+        PlayerGameData gamedata = new PlayerGameData();
+        gamedata.playerHp = playerhealth.currentHealth;
+        if (scoreManager != null)
+        {
+            gamedata.playerScore = scoreManager.score;
+        }
+        if (inventory != null)
+        {
+            gamedata.inventoryItems.Clear();
+            for (int i = 0; i < inventory.SlotCount; i++)
+            {
+                gamedata.inventoryItems.Add(inventory.GetItemType(i));
+            }
+        }
+
+        string gameDataJson = JsonUtility.ToJson(gamedata);
+        File.WriteAllText(Application.dataPath + "/gameDataPhase1.json", gameDataJson);
+        Debug.Log("Save game dataPhase1");
+    }
     public void ClearData()
     {
         string path = Application.dataPath + "/gameData.json";
+        string pathPhase1 = Application.dataPath + "/gameDataPhase1.json";
         if (File.Exists(path))
         {
             File.Delete(path);
@@ -129,6 +195,28 @@ public class GameDataHandler : MonoBehaviour
         else
         {
             Debug.Log("No data to delete");
+        }
+        if(File.Exists(pathPhase1))
+        {
+            File.Delete(pathPhase1);
+            Debug.Log("deleted save phase1");
+        }
+        else
+        {
+            Debug.Log("No data to delete phase1");
+        }
+    }
+    public void ClearDataBoss()
+    {
+        string pathPhase1 = Application.dataPath + "/gameDataPhase1.json";
+        if (File.Exists(pathPhase1))
+        {
+            File.Delete(pathPhase1);
+            Debug.Log("deleted save phase1");
+        }
+        else
+        {
+            Debug.Log("No data to delete phase1");
         }
     }
     private Sprite GetSpriteFromType(ItemsType type)
