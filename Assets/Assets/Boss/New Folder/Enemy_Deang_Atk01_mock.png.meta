@@ -1,0 +1,932 @@
+fileFormatVersion: 2
+guid: 5d726bcfc0638ce4683e1607ff96ca92
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 971213e629a1a784183a87505f7be59b
+      internalID: 1702228663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_1
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 4320
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d66657c102ebbd409603e908a135be8
+      internalID: 489520921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_2
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 4320
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc111af4f10bcb6429b79fea869ae5bf
+      internalID: 946382996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_3
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 4320
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe2dac8f61e8fc43bfd15bc18473afb
+      internalID: 101190212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_4
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 4320
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f12097e1ea7604994e7be6e31dc40d
+      internalID: -883663431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_5
+      rect:
+        serializedVersion: 2
+        x: 4080
+        y: 4320
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed79d240add930448a17521116686b1e
+      internalID: -2006306539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3456
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76fdb09799ba1314fa67511608bb67aa
+      internalID: 797743121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_7
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 3456
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91fec22a711569546b6c6963c0732575
+      internalID: 634887520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_8
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 3456
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0176312775b65149b6a6fb27df4902a
+      internalID: 790348846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_9
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 3456
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81950105f6208d04cb818583806219e2
+      internalID: 469238499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_10
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 3456
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3540a6035a8b0364b8005a28b88764e3
+      internalID: -2017912346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_11
+      rect:
+        serializedVersion: 2
+        x: 4080
+        y: 3456
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3844aafce72ecf74bbfed7c1e772dc72
+      internalID: -898578984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2592
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f0fd92ca16933f42b8da7ae2ccbc68b
+      internalID: 1530685356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_13
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 2592
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f26d3efe05f74249be6e153630b4b29
+      internalID: 61631092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_14
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 2592
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 968be146b08a6be41b1b794ada9981fd
+      internalID: 956698534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_15
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 2592
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4f52c52b08d624b9745c2473088625
+      internalID: -186135892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_16
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 2592
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17a4c621261dab4c961899acf8c6bcd
+      internalID: 1880864462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_17
+      rect:
+        serializedVersion: 2
+        x: 4080
+        y: 2592
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 488968644eac36343a8830e3701a2b8b
+      internalID: -1401985392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1728
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ba99652aa4215d4bb4f870f67c81b6d
+      internalID: 287245922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_19
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 1728
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 179003357e8d9a944a6badb4d579a7b9
+      internalID: 231191907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_20
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1728
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b88426d2a3bee447bf3a7fdb16bf86d
+      internalID: 642735066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_21
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 1728
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b241c9c1d384664da5d1858b5acca37
+      internalID: 1854202162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_22
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 1728
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8ec0ff5e5947745b2928cb8ea6affc
+      internalID: 2054699098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_23
+      rect:
+        serializedVersion: 2
+        x: 4080
+        y: 1728
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea4a6712e208934fb923b3fc5433efb
+      internalID: -1819887284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95bd9e80a14787a4c8a2375daa8d6fc9
+      internalID: 1901593913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_25
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 864
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae20a67cf9282064d9ff5c1c63356be8
+      internalID: -324679102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_26
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 864
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20eb520d7cfcb8347b6257b4471226d4
+      internalID: -1382846782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_27
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 864
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9cb2f3f448bc4347a3cafde40703597
+      internalID: -109572264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_28
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 864
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5adb5601f148d4ab6d9910ab829563
+      internalID: -547872873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_29
+      rect:
+        serializedVersion: 2
+        x: 4080
+        y: 864
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e4d75be4d1922428a71fe6d0764afd
+      internalID: -400442551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73cc4274b2865f5478fb31bf338acdd6
+      internalID: -457988728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_31
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500b2a7ff2a67864e9e71c77b1c22efe
+      internalID: -1750041869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_32
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 0
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d74d504a206c0754ca11ad61d2a038e4
+      internalID: 579662906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_33
+      rect:
+        serializedVersion: 2
+        x: 2448
+        y: 0
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032c32637f9cc084ca64d1d9ad2919c7
+      internalID: 1621916113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_34
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 0
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920a0d34d34e00c42b6d0c06b38f79af
+      internalID: -863087927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemy_Deang_Atk01_mock_35
+      rect:
+        serializedVersion: 2
+        x: 4080
+        y: 0
+        width: 816
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e9910ca4b2b084e845e18ec8cf1482
+      internalID: 229528340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Enemy_Deang_Atk01_mock_0: 1702228663
+      Enemy_Deang_Atk01_mock_1: 489520921
+      Enemy_Deang_Atk01_mock_10: -2017912346
+      Enemy_Deang_Atk01_mock_11: -898578984
+      Enemy_Deang_Atk01_mock_12: 1530685356
+      Enemy_Deang_Atk01_mock_13: 61631092
+      Enemy_Deang_Atk01_mock_14: 956698534
+      Enemy_Deang_Atk01_mock_15: -186135892
+      Enemy_Deang_Atk01_mock_16: 1880864462
+      Enemy_Deang_Atk01_mock_17: -1401985392
+      Enemy_Deang_Atk01_mock_18: 287245922
+      Enemy_Deang_Atk01_mock_19: 231191907
+      Enemy_Deang_Atk01_mock_2: 946382996
+      Enemy_Deang_Atk01_mock_20: 642735066
+      Enemy_Deang_Atk01_mock_21: 1854202162
+      Enemy_Deang_Atk01_mock_22: 2054699098
+      Enemy_Deang_Atk01_mock_23: -1819887284
+      Enemy_Deang_Atk01_mock_24: 1901593913
+      Enemy_Deang_Atk01_mock_25: -324679102
+      Enemy_Deang_Atk01_mock_26: -1382846782
+      Enemy_Deang_Atk01_mock_27: -109572264
+      Enemy_Deang_Atk01_mock_28: -547872873
+      Enemy_Deang_Atk01_mock_29: -400442551
+      Enemy_Deang_Atk01_mock_3: 101190212
+      Enemy_Deang_Atk01_mock_30: -457988728
+      Enemy_Deang_Atk01_mock_31: -1750041869
+      Enemy_Deang_Atk01_mock_32: 579662906
+      Enemy_Deang_Atk01_mock_33: 1621916113
+      Enemy_Deang_Atk01_mock_34: -863087927
+      Enemy_Deang_Atk01_mock_35: 229528340
+      Enemy_Deang_Atk01_mock_4: -883663431
+      Enemy_Deang_Atk01_mock_5: -2006306539
+      Enemy_Deang_Atk01_mock_6: 797743121
+      Enemy_Deang_Atk01_mock_7: 634887520
+      Enemy_Deang_Atk01_mock_8: 790348846
+      Enemy_Deang_Atk01_mock_9: 469238499
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
