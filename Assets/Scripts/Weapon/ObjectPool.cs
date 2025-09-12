@@ -32,10 +32,17 @@ public class ObjectPool : MonoBehaviour
     public int bossPoolSize = 6;
     private List<GameObject> bossPool;
     private List<GameObject> portalPool;
+
     [Header("Rain")]
     public GameObject bossRainPrefabs;
     public int rainPoolSize = 20;
     private List<GameObject> rainPool;
+
+    [Header("Portal Ground")]
+    public GameObject portalGroundPrefabs;
+    public int portalGroundPoolSize = 6;
+    private List<GameObject> portalGroundPool;
+
     [Header("O")]
     [SerializeField] private BossController bossController;
 
@@ -100,6 +107,13 @@ public class ObjectPool : MonoBehaviour
                 rain.SetActive(false);
                 rainPool.Add(rain);
             }
+            portalGroundPool = new List<GameObject>();
+            for (int h = 0; h < portalGroundPoolSize; h++)
+            {
+                GameObject portalGround = Instantiate(portalGroundPrefabs);
+                portalGround.SetActive(false);
+                portalGroundPool.Add(portalGround);
+            }
         }
     }
     public void BossBullet()
@@ -153,6 +167,18 @@ public class ObjectPool : MonoBehaviour
             {
                 portal.SetActive(true);
                 return portal;
+            }
+        }
+        return null;
+    }
+    public GameObject GetBossPortalGroundObject()
+    {
+        foreach (GameObject portalGround in portalGroundPool)
+        {
+            if (!portalGround.activeInHierarchy)
+            {
+                portalGround.SetActive(true);
+                return portalGround;
             }
         }
         return null;
