@@ -10,6 +10,7 @@ public class BossController : MonoBehaviour
     public BossIdleState bossIdleState;
     public BossFireState bossFireState;
     public BossRainState bossRainState;
+    public BossPortalGroundState bossPortalGroundState;
     public BossHappyState bossHappyState;
     public BossState state;
 
@@ -20,6 +21,8 @@ public class BossController : MonoBehaviour
     public bool _isFacingRight = false;
     public Transform playerTarget;
     public Transform startBossPos;
+    public bool rain = false;
+    public bool portalGround = false;
 
     [Space]
     [Header("GameObject")]
@@ -70,6 +73,7 @@ public class BossController : MonoBehaviour
         bossIdleState.Setup(rb2d, anim, this);
         bossFireState.Setup(rb2d, anim, this);
         bossRainState.Setup(rb2d, anim, this);
+        bossPortalGroundState.Setup(rb2d, anim, this);
         bossHappyState.Setup(rb2d, anim, this);
         state = bossIdleState;
     }
@@ -87,6 +91,8 @@ public class BossController : MonoBehaviour
         if (status.isDead)
             return;
         if (bossRainState.raining)
+            return;
+        if (bossPortalGroundState.portaling)
             return;
         if(canShoot && currentAttackCount < attackCount) 
         {
@@ -111,15 +117,48 @@ public class BossController : MonoBehaviour
             }
 
         }
-        if (currentAttackCount >= attackCount && !bossRainState.raining)
+        if (currentAttackCount >= attackCount && !bossRainState.raining && !bossPortalGroundState.portaling)
         {
             if (bossFireState.exitToRain)
             {
-                state = bossRainState;
-                currentAttackCount = 0;
-                canShoot = false;
-                bossFireState.exitToRain = false;
-                state.Enter();
+                if(phase == BossPhase.phase1)
+                {
+                    state = bossRainState;
+                    currentAttackCount = 0;
+                    canShoot = false;
+                    bossFireState.exitToRain = false;
+                    state.Enter();
+                }
+                if (phase == BossPhase.phase2)
+                {
+                    int randomState = Random.Range(0, 2);
+                    if(randomState == 0)
+                    {
+                        rain = true;
+                        portalGround = false;
+                    }
+                    else if(randomState == 1)
+                    {
+                        rain = false;
+                        portalGround = true;
+                    }
+                    if(portalGround)
+                    {
+                        state = bossPortalGroundState;
+                        currentAttackCount = 0;
+                        canShoot = false;
+                        bossFireState.exitToRain = false;
+                        state.Enter();
+                    }
+                    else if(rain)
+                    {
+                        state = bossRainState;
+                        currentAttackCount = 0;
+                        canShoot = false;
+                        bossFireState.exitToRain = false;
+                        state.Enter();
+                    }
+                }
             }
         }
     }
@@ -136,6 +175,26 @@ public class BossController : MonoBehaviour
         anim.Play(bossRainState.animExitRainClip.name);
         yield return new WaitForSeconds(bossRainState.animExitRainClip.length);
         bossRainState.raining = false;
+
+        state = bossIdleState;
+        state.Enter();
+        yield return new WaitForSeconds(3f);
+        currentAttackCount = 0;
+        if (phase == BossPhase.phase1)
+        {
+            attackCount = Random.Range(3, 6);
+        }
+        else if (phase == BossPhase.phase2)
+        {
+            attackCount = Random.Range(6, 12);
+        }
+        canShoot = true;
+    }
+    public IEnumerator DelayPortalGroundBeforeFire()
+    {
+        anim.Play(bossPortalGroundState.animExitPortalGroundClip.name);
+        yield return new WaitForSeconds(bossPortalGroundState.animExitPortalGroundClip.length);
+        bossPortalGroundState.portaling = false;
 
         state = bossIdleState;
         state.Enter();

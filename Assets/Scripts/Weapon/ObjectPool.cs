@@ -40,7 +40,7 @@ public class ObjectPool : MonoBehaviour
 
     [Header("Portal Ground")]
     public GameObject portalGroundPrefabs;
-    public int portalGroundPoolSize = 6;
+    public int portalGroundPoolSize = 10;
     private List<GameObject> portalGroundPool;
 
     [Header("O")]

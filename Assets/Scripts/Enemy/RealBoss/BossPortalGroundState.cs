@@ -9,7 +9,7 @@ public class BossPortalGroundState : BossState
     public AnimationClip animAttackclip;
     public AnimationClip animEnterClip;
     public AnimationClip animExitClip;
-    public AnimationClip animExitRainClip;
+    public AnimationClip animExitPortalGroundClip;
     public AnimationClip animIdleClip;
     public CapsuleCollider2D col2d;
     public bool portaling;
@@ -30,13 +30,15 @@ public class BossPortalGroundState : BossState
     }
     public override void Enter()
     {
-        portalGroundMax = Random.Range(2, 3);
-        portalGroundAmount = Random.Range(4, 6);
+        portalGroundMax = Random.Range(3, 5);
+        portalGroundAmount = Random.Range(8, 10);
         transform.position = bossPortalPos.position;
         col2d.enabled = false;
         shadow.SetActive(false);
         portaling = true;
         anim.Play(animEnterClip.name);
+
+        StartCoroutine(PortalGroundRoutine());
     }
     public override void Do()
     {
@@ -52,12 +54,65 @@ public class BossPortalGroundState : BossState
     }
     public void BossPortalGround()
     {
-        int random = Random.Range(0, portalGroundPoint.Length);
-        Transform allPoint = portalGroundPoint[random];
-        GameObject portalGround = objectpool.GetBossPortalGroundObject();
+        List<Transform> availablePoints = new List<Transform>(portalGroundPoint);
+        int spawnCount = Mathf.Min(portalGroundAmount, availablePoints.Count);
+        for(int i = 0; i < spawnCount; i++) 
+        {
+            int random = Random.Range(0, availablePoints.Count);
+            Transform spawnPoint = availablePoints[random];
+            GameObject portalGround = objectpool.GetBossPortalGroundObject();
+            if (portalGround != null)
+            {
+                portalGround.transform.position = spawnPoint.position;
+                portalGround.SetActive(true);
+            }
+            availablePoints.RemoveAt(random);
+        }
+        currentPortalGround++;
     }
     public override void Exit()
     {
-        
+        transform.position = bossInput.startBossPos.position;
+        col2d.enabled = true;
+    }
+    //IEnumerator PortalGroundEnter()
+    //{
+    //    yield return new WaitForSeconds(animEnterClip.length);
+    //    timeCount = 0;
+
+    //    anim.Play(animAttackclip.name);
+    //    yield return new WaitForSeconds(animAttackclip.length);
+    //    toIdle = true;
+    //}
+    IEnumerator PortalGroundRoutine()
+    {
+        yield return new WaitForSeconds(animEnterClip.length);
+        timeCount = 0;
+        for(int i = 0; i <portalGroundMax; i++)
+        {
+            anim.Play(animAttackclip.name);
+            Debug.Log("Atk");
+            yield return new WaitForSeconds(animAttackclip.length);
+            if(i < portalGroundMax - 1) 
+            {
+                anim.Play(animIdleClip.name);
+                Debug.Log("Idle");
+                yield return new WaitForSeconds(3f);
+            }
+        }
+        anim.Play(animIdleClip.name);
+        yield return new WaitForSeconds(4f);
+        anim.Play(animExitClip.name);
+        StartCoroutine(PortalGroundExit());
+
+
+        bossInput.canShoot = false;
+        shadow.SetActive(true);
+    }
+    IEnumerator PortalGroundExit()
+    {
+        yield return new WaitForSeconds(animExitClip.length);
+        Exit();
+        yield return StartCoroutine(bossInput.DelayPortalGroundBeforeFire());
     }
 }

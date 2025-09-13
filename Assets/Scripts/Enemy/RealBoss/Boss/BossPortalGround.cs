@@ -6,22 +6,11 @@ using UnityEngine;
 public class BossPortalGround : MonoBehaviour
 {
     private ObjectPool objectpool;
-    [SerializeField] float bulletSpeed;
-    BossFireState bossFire;
-    BossController bossController;
+    [SerializeField] float bulletSpeed = 15f;
     [SerializeField] Transform firePoint;
     private void Awake()
     {
         objectpool = FindObjectOfType<ObjectPool>();
-        bossFire = FindObjectOfType<BossFireState>();
-        bossController = FindObjectOfType<BossController>();
-    }
-    private void Update()
-    {
-        if (bossFire != null)
-        {
-            bulletSpeed = 15f;
-        }
     }
     public void ClosePortal()
     {
@@ -33,6 +22,11 @@ public class BossPortalGround : MonoBehaviour
         if (bossBullet != null)
         {
             bossBullet.transform.position = firePoint.position;
+            Rigidbody2D rb2d = bossBullet.GetComponent<Rigidbody2D>();
+            if(rb2d != null ) 
+            {
+                rb2d.velocity = Vector2.up * bulletSpeed;
+            }
         }
     }
 }
