@@ -27,6 +27,7 @@ public class BossFireState : BossState
     
     private void Awake()
     {
+        //exitToRain = false;
         playerStatus = FindAnyObjectByType<PlayerHealth>();
         objectpool = FindObjectOfType<ObjectPool>();
         bossController = GetComponent<BossController>();
@@ -111,19 +112,33 @@ public class BossFireState : BossState
     }
     public override void Do()
     {
-        if(bossController.currentAttackCount >= bossController.attackCount && !exitToRain)
+        if(bossController.currentAttackCount >= bossController.attackCount && !bossInput.exitToState) //!exitToRain
         {
             Exit();
         }
     }
     public override void Exit()
     {
-        anim.Play(animExitClip.name);
-        bossController.StartCoroutine(ExitToRain());
+        //anim.Play(animExitClip.name);
+        //Debug.Log("exitFire");
+        //bossController.StartCoroutine(ExitToRain());
+        if (!bossInput.exitToState)   /*(!exitToRain)*/
+        {
+            bossController.StartCoroutine(ExitRoutine());
+        }
     }
     IEnumerator ExitToRain()
     {
         yield return new WaitForSeconds(animExitClip.length);
-        exitToRain = true;
+        //exitToRain = true;
+        bossInput.exitToState = true;
+    }
+    IEnumerator ExitRoutine()
+    {
+        anim.Play(animExitClip.name);
+        Debug.Log("exitFire");
+        yield return new WaitForSeconds(animExitClip.length);
+        //exitToRain = true;
+        bossInput.exitToState = true;
     }
 }

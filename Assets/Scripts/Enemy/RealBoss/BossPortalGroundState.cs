@@ -46,7 +46,7 @@ public class BossPortalGroundState : BossState
         {
             timeCount += Time.deltaTime;
         }
-        if(toIdle != toExit)
+        if(toIdle && !toExit)
         {
             anim.Play(animIdleClip.name);
             toExit = true;
@@ -88,7 +88,7 @@ public class BossPortalGroundState : BossState
     {
         yield return new WaitForSeconds(animEnterClip.length);
         timeCount = 0;
-        for(int i = 0; i <portalGroundMax; i++)
+        for(int i = 0; i < portalGroundMax; i++)
         {
             anim.Play(animAttackclip.name);
             Debug.Log("Atk");

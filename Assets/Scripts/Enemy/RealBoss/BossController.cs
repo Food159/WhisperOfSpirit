@@ -23,6 +23,7 @@ public class BossController : MonoBehaviour
     public Transform startBossPos;
     public bool rain = false;
     public bool portalGround = false;
+    public bool exitToState = false;
 
     [Space]
     [Header("GameObject")]
@@ -119,14 +120,16 @@ public class BossController : MonoBehaviour
         }
         if (currentAttackCount >= attackCount && !bossRainState.raining && !bossPortalGroundState.portaling)
         {
-            if (bossFireState.exitToRain)
+            if (exitToState)/*(bossFireState.exitToRain)*/
             {
+                exitToState = false;        //bossFireState.exitToRain = false;
                 if(phase == BossPhase.phase1)
                 {
                     state = bossRainState;
                     currentAttackCount = 0;
                     canShoot = false;
-                    bossFireState.exitToRain = false;
+                    exitToState = false;
+                    //bossFireState.exitToRain = false;
                     state.Enter();
                 }
                 if (phase == BossPhase.phase2)
@@ -147,7 +150,8 @@ public class BossController : MonoBehaviour
                         state = bossPortalGroundState;
                         currentAttackCount = 0;
                         canShoot = false;
-                        bossFireState.exitToRain = false;
+                        exitToState = false;
+                        //bossFireState.exitToRain = false;
                         state.Enter();
                     }
                     else if(rain)
@@ -155,7 +159,8 @@ public class BossController : MonoBehaviour
                         state = bossRainState;
                         currentAttackCount = 0;
                         canShoot = false;
-                        bossFireState.exitToRain = false;
+                        exitToState = false;
+                        //bossFireState.exitToRain = false;
                         state.Enter();
                     }
                 }
@@ -175,7 +180,8 @@ public class BossController : MonoBehaviour
         anim.Play(bossRainState.animExitRainClip.name);
         yield return new WaitForSeconds(bossRainState.animExitRainClip.length);
         bossRainState.raining = false;
-
+        bossRainState.timer = 0f;
+        exitToState = false;
         state = bossIdleState;
         state.Enter();
         yield return new WaitForSeconds(3f);
@@ -195,7 +201,7 @@ public class BossController : MonoBehaviour
         anim.Play(bossPortalGroundState.animExitPortalGroundClip.name);
         yield return new WaitForSeconds(bossPortalGroundState.animExitPortalGroundClip.length);
         bossPortalGroundState.portaling = false;
-
+        exitToState = false;
         state = bossIdleState;
         state.Enter();
         yield return new WaitForSeconds(3f);

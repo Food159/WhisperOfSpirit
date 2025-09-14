@@ -24,20 +24,25 @@ public class BossRainState : BossState
     public float rainInterval;
     [SerializeField] private int rainAmount = 5;
     public float rainDuration;
-    private float timer = 0f;
+    public float timer = 0f;
+
+    private Coroutine rainRoutine;
     private void Awake()
     {
         objectpool = FindObjectOfType<ObjectPool>();
     }
     public override void Enter()
     {
+        raining = true;
+        timer = 0f;
+        toIdle = false;
+        toExit = false;
         rainDuration = Random.Range(9f, 20f);
         transform.position = bossRainPos.position;
         col2d.enabled = false;
         shadow.SetActive(false);
-        raining = true;
         anim.Play(animEnterClip.name);
-
+        
         StartCoroutine(RainEnter());
     }
     public override void Do()
@@ -56,6 +61,7 @@ public class BossRainState : BossState
     {
         transform.position = bossInput.startBossPos.position;
         toIdle = false;
+        toExit = false;
         col2d.enabled = true;
     }
     IEnumerator Rain()
@@ -93,6 +99,7 @@ public class BossRainState : BossState
     {
         yield return new WaitForSeconds(animEnterClip.length);
         timeCount = 0;
+        timer = 0f;
 
         if (phase == BossPhase.phase1)
         {
