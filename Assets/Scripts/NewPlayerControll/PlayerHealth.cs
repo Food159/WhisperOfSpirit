@@ -55,7 +55,7 @@ public class PlayerHealth : Subject
     {
         if (_isPlayerDead)
             return;
-
+        SoundManager.instance.PlaySfx(SoundManager.instance.lungAttackClip);
         currentHealth -= damage;
         healthbar.SetHealth(currentHealth);
         UpdateSprite();

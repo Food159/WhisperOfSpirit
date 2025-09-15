@@ -73,12 +73,14 @@ public class Ice_Water : MonoBehaviour
     {
         if ((obj.CompareTag("Ice") && targetTag == "IceZone") || (obj.CompareTag("Water") && targetTag == "WaterZone"))
         {
+            SoundManager.instance.PlaySfx(SoundManager.instance.minigameCorrect);
             currentScore++;
             Destroy(obj);
             SpawnRandom();
         }
         else
         {
+            SoundManager.instance.PlaySfx(SoundManager.instance.minigameWrong);
             currentScore--;
             if(currentScore < 0) 
             {
@@ -89,6 +91,7 @@ public class Ice_Water : MonoBehaviour
         scoreText.text = $"Score : {currentScore}/{scoreRequire}";
         if(currentScore >= scoreRequire)
         {
+            SoundManager.instance.PlaySfx(SoundManager.instance.minigameComplete);
             success = true;
             EndIce();
         }
@@ -102,6 +105,7 @@ public class Ice_Water : MonoBehaviour
             timeCountText.text = Mathf.Ceil(timer).ToString();
             yield return null;
         }
+        SoundManager.instance.PlaySfx(SoundManager.instance.minigameFail);
         timeCountText.text = "Time Up!!!";
         if(currentObj != null) 
         {

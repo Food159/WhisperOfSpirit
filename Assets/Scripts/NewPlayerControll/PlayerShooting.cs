@@ -12,17 +12,20 @@ public class PlayerShooting : Subject, IPausable
     //public GameObject bulletPrefab;
     public float bulletSpeed = 10f;
     public int waterammo;
-    public float waterReload = 1.25f;
+    private float waterReload = 0.9f;
+    public float waterTestReload;
 
     private bool _isFacingRight = true;
     SoundManager soundmanager;
     PauseMenu pausemenu;
     PlayerHealth status;
     PlayerWater playerwater;
+    [SerializeField] Items items;
     private void Awake()
     {
         playerwater = GetComponent<PlayerWater>();
         status = GetComponent<PlayerHealth>();
+        items = FindAnyObjectByType<Items>();
         //soundmanager = GameObject.FindGameObjectWithTag("Audio").GetComponent<SoundManager>(); เอาเเพิ่มด้วยยยยยยยยยยยยยยยยย
     }
     private void Start()
@@ -31,9 +34,10 @@ public class PlayerShooting : Subject, IPausable
     }
     void Update()
     {
+        waterTestReload = waterReload;
         if (status._isPlayerDead)
             return;
-        if(Input.GetAxis("Horizontal") > 0)
+        if (Input.GetAxis("Horizontal") > 0)
         {
             _isFacingRight = true;
         }
@@ -51,6 +55,17 @@ public class PlayerShooting : Subject, IPausable
             {
                 //NotifyObservers(PlayerAction.Attack);
                 shooting();
+            }
+        }
+        if (items != null)
+        {
+            if (items.reloadSpeed)
+            {
+                waterReload = 0.9f * 0.5f;
+            }
+            else if (!items.reloadSpeed)
+            {
+                waterReload = 0.9f;
             }
         }
     }

@@ -15,6 +15,7 @@ public class HealItems : MonoBehaviour
     {
         if(collision.CompareTag("Player"))
         {
+            SoundManager.instance.PlaySfx(SoundManager.instance.itemsPick);
             playerhealth.currentHealth += 20;
             //hpbar.SetHealth(playerhealth.currentHealth);
             Destroy(gameObject);

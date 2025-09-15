@@ -96,12 +96,14 @@ public class IpadTeen : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.5f);
         if(firstCard.image.sprite == secondCard.image.sprite) 
         {
+            SoundManager.instance.PlaySfx(SoundManager.instance.minigameCorrect);
             firstCard.gameObject.SetActive(false);
             secondCard.gameObject.SetActive(false);
             CheckRoundComplete();
         }
         else
         {
+            SoundManager.instance.PlaySfx(SoundManager.instance.minigameWrong);
             firstCard.interactable = true;
             secondCard.interactable = true;
         }
@@ -134,6 +136,7 @@ public class IpadTeen : MonoBehaviour
             timerText.text = Mathf.Ceil(timer).ToString();
             yield return null;
         }
+        SoundManager.instance.PlaySfx(SoundManager.instance.minigameFail);
         Debug.Log("Time Up");
         success = false;
         EndIpad();
@@ -149,6 +152,7 @@ public class IpadTeen : MonoBehaviour
         }
         else
         {
+            SoundManager.instance.PlaySfx(SoundManager.instance.minigameComplete);
             success = true;
             EndIpad();
         }

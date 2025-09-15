@@ -119,7 +119,6 @@ public class PointCheck : MonoBehaviour
             menu.SetActive(true);
         }
         rotating = false;
-
         float angle = pointer.eulerAngles.z;
         if (angle > 180f) angle -= 360f;
 
@@ -147,10 +146,12 @@ public class PointCheck : MonoBehaviour
 
         if (success)
         {
+            SoundManager.instance.PlaySfx(SoundManager.instance.minigameCorrect);
             successCount++;
             Debug.Log($"Success {successCount}/{successRequired}");
             if(successCount >= successRequired)
             {
+                SoundManager.instance.PlaySfx(SoundManager.instance.minigameComplete);
                 isSuccess = true;
                 EndCheck();
             }
@@ -161,10 +162,12 @@ public class PointCheck : MonoBehaviour
         }
         else
         {
+            SoundManager.instance.PlaySfx(SoundManager.instance.minigameWrong);
             failCount++;
             Debug.Log($"Fail {failCount}/{maxFail}");
             if (failCount >= maxFail)
             {
+                SoundManager.instance.PlaySfx(SoundManager.instance.minigameFail);
                 successCount = 0;
                 isSuccess = false;
                 Debug.Log("Fail!");

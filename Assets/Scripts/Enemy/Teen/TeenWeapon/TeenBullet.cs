@@ -40,6 +40,7 @@ public class TeenBullet : MonoBehaviour
             }
             if(colourTeen.Length > 0) 
             {
+                SoundManager.instance.PlaySfx(SoundManager.instance.blind);
                 int randomeffect = Random.Range(0, colourTeen.Length);
                 GameObject effect = Instantiate(colourTeen[randomeffect], uiCanvas.transform);
                 effect.SetActive(true);

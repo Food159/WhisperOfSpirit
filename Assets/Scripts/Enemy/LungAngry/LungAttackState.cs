@@ -34,7 +34,7 @@ public class LungAttackState : LungState
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackpoint.position, attackrange, playerlayer);
         foreach (Collider2D hit in hits) 
         {
-            SoundManager.instance.PlaySfx(SoundManager.instance.lungAttackClip);
+            //SoundManager.instance.PlaySfx(SoundManager.instance.lungAttackClip);
             PlayerHealth playerhealth = hit.GetComponent<PlayerHealth>();
             PlayerController playercontroller = hit.GetComponent<PlayerController>();
             if (playerhealth != null) 

@@ -12,6 +12,7 @@ public class Items : MonoBehaviour
     //public TMP_Text timerText;
     public bool changeSprite = false;
     public bool damageIncrese = false;
+    public bool reloadSpeed = false;
     private void Awake()
     {
         playerShooting = FindAnyObjectByType<PlayerShooting>();
@@ -60,26 +61,30 @@ public class Items : MonoBehaviour
     IEnumerator UseMango(int index)
     {
         playerShooting.bulletSpeed = 10 / 0.5f; //10 / 0.5f = 20
-        playerShooting.waterReload = 1.25f * 0.5f; // 1.25 * 0.5 = 0.625
+        //playerShooting.waterReload = 1.25f * 0.5f; // 1.25 * 0.5 = 0.625
         damageIncrese = true;
         changeSprite = true;
+        reloadSpeed = true;
         Debug.Log("UseMango");
         //yield return new WaitForSeconds(10f);
         yield return StartCoroutine(StartTimer(index, 10f));
         playerShooting.bulletSpeed = 10f;
-        playerShooting.waterReload = 1.25f;
+        //playerShooting.waterReload = 1.25f;
         changeSprite = false;
         damageIncrese = false;
+        reloadSpeed = false;
     }
     IEnumerator UseRice(int index)
     {
         playerShooting.bulletSpeed = 10 / 0.5f;
-        playerShooting.waterReload = 1.25f * 0.5f;
+        //playerShooting.waterReload = 1.25f * 0.5f;
+        reloadSpeed = true;
         Debug.Log("UseRice");
         //yield return new WaitForSeconds(5f);
         yield return StartCoroutine(StartTimer(index, 5f));
         playerShooting.bulletSpeed = 10f;
-        playerShooting.waterReload = 1.25f;
+        //playerShooting.waterReload = 1.25f;
+        reloadSpeed = false;
     }
     IEnumerator UseGreen(int index)
     {
