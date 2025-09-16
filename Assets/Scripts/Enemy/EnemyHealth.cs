@@ -20,10 +20,6 @@ public class EnemyHealth : MonoBehaviour
         healthbar.SetMaxHealth(maxHealth);
         healthbar.SetHealth(currentHealth);
     }
-    private void Update()
-    {
-
-    }
     public void TakeDamage(int damage)
     {
         if (_isDead)
