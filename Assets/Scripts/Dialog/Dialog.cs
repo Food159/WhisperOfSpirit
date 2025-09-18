@@ -23,6 +23,7 @@ public class Dialog : MonoBehaviour
 
     [Header("Image")]
     public GameObject oldBG;
+    public GameObject sakchaiBG;
     public GameObject newBG;
     public GameObject daraIMG1;
     public GameObject daraIMG2;
@@ -140,9 +141,15 @@ public class Dialog : MonoBehaviour
         {
             index++;
             StartCoroutine(TypeLine());
+            if(index == 2)
+            {
+                if (oldBG != null) oldBG.SetActive(false);
+                if (sakchaiBG != null) sakchaiBG.SetActive(true);
+            }
             if(index == 4)
             {
-                if(oldBG != null) oldBG.SetActive(false);
+                //if(oldBG != null) oldBG.SetActive(false);
+                if(sakchaiBG != null) sakchaiBG.SetActive(false);
                 if (newBG!= null) newBG.SetActive(true);
             }
             if(index == 8 && daraIMG1 != null)

@@ -19,7 +19,7 @@ public class Ice_Water : MonoBehaviour
     [Space]
     [Header("Config")]
     [SerializeField] Transform spawnPoint;
-    public float time = 20f;
+    private float time = 30f;
     public bool success = false;
     private int currentScore;
     private int scoreRequire = 20;

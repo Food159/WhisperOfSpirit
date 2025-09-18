@@ -933,81 +933,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &502708318
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 502708321}
-  - component: {fileID: 502708320}
-  - component: {fileID: 502708319}
-  m_Layer: 5
-  m_Name: BG 3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &502708319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502708318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a77c4c1f6b9d1e946889af90afce467e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &502708320
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502708318}
-  m_CullTransparentMesh: 1
---- !u!224 &502708321
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 502708318}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 967195066}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &521511486
 GameObject:
   m_ObjectHideFlags: 0
@@ -2174,7 +2099,6 @@ RectTransform:
   - {fileID: 82813288}
   - {fileID: 1232847595}
   - {fileID: 345548841}
-  - {fileID: 502708321}
   - {fileID: 691291996}
   - {fileID: 930566511}
   - {fileID: 1682746228}
@@ -2844,6 +2768,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1688593646}
   - component: {fileID: 1688593649}
+  - component: {fileID: 1688593650}
   - component: {fileID: 1688593648}
   - component: {fileID: 1688593647}
   m_Layer: 5
@@ -2921,7 +2846,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688593645}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c3f47eadf5e35914db05fd111745bd18, type: 3}
   m_Name: 
@@ -2970,7 +2895,7 @@ MonoBehaviour:
   imageContinue: {fileID: 489846435}
   _isChoice: 0
   oldBG: {fileID: 1232847594}
-  sakchaiBG: {fileID: 502708318}
+  sakchaiBG: {fileID: 0}
   newBG: {fileID: 345548840}
   daraIMG1: {fileID: 691291995}
   daraIMG2: {fileID: 930566508}
@@ -2979,6 +2904,82 @@ MonoBehaviour:
   Choice_2: {fileID: 749489954}
   Choice_3: {fileID: 794064422}
   textSpeed: 0.05
+  _isTyping: 0
+  _isChoiceFinished: 0
+  _showNextChoice: 0
+--- !u!114 &1688593650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688593645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430042b827b553d42b5a3846a75257ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogData: {fileID: 11400000, guid: 004a65af65b45394894400334535b46a, type: 2}
+  nameData: {fileID: 11400000, guid: 5438765a6eba76442b0015a75dd41620, type: 2}
+  lineKey:
+  - Dialog2_0
+  - Dialog2_1
+  - Dialog2_2
+  - Dialog2_3
+  - Dialog2_4
+  - Dialog2_5
+  - Dialog2_6
+  - Dialog2_7
+  - Dialog2_8
+  - Dialog2_9
+  - Dialog2_10
+  - Dialog2_11
+  - Dialog2_12
+  - Dialog2_13
+  - Dialog2_14
+  - Dialog2_15
+  - Dialog2_16
+  - Dialog2_17
+  - Dialog2_18
+  - Dialog2_19
+  - Dialog2_20
+  - Dialog2_21
+  - Dialog2_22
+  - Dialog2_23
+  - Dialog2_24
+  - Dialog2_25
+  - Dialog2_26
+  nameKey:
+  - Name_Narration
+  - Name_Dara
+  - Name_Dara
+  - Name_Tawan
+  - Name_Dara
+  - Name_Tawan
+  - Name_Dara
+  - Name_Dara
+  - Name_Dara
+  - Name_Dara
+  - Name_Dara
+  - Name_Tawan
+  - Name_Dara
+  - Name_Tawan
+  - Name_Dara
+  - Name_Dara
+  - Name_Tawan
+  - Name_Dara
+  - Name_Dara
+  - Name_Narration
+  - Name_Narration
+  - Name_Narration
+  - Name_Tawan
+  - Name_Tawan
+  - Name_Tawan
+  - Name_Dara
+  - Name_Tawan
+  textComponent: {fileID: 1955759099}
+  textNames: {fileID: 444771554}
+  imageContinue: {fileID: 489846435}
   _isTyping: 0
   _isChoiceFinished: 0
   _showNextChoice: 0

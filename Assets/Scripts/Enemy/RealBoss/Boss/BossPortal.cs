@@ -28,7 +28,7 @@ public class BossPortal : MonoBehaviour
             }
             else if(bossFire.phase2)
             {
-                bulletSpeed = 12f;
+                bulletSpeed = 10f;
             }
         }
     }

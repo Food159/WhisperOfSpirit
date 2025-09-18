@@ -65,11 +65,11 @@ public class SoundManager : MonoBehaviour
         {
             level = Levelll.levelTutorial;
         }
-        else if(sceneName == "SceneGameTwo")
+        else if(sceneName == "SceneGameTwo" || sceneName == "SceneDialogueToGameOne")
         {
             level = Levelll.levelOne;
         }
-        else if (sceneName == "SceneGameThree")
+        else if (sceneName == "SceneGameThree" || sceneName == "SceneDialogueToGameTwo")
         {
             level = Levelll.levelTwo;
         }

@@ -15,7 +15,7 @@ public class IpadTeen : MonoBehaviour
     [Header("Config")]
     [SerializeField] List<Sprite> colorSprites;
     [SerializeField] List<Button> cardButtons;
-    public float timerPerRound = 20f;
+    private float timerPerRound = 30f;
     public int totalRound = 3;
     public bool success = false;
 

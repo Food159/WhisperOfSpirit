@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChoiceManager : MonoBehaviour
 {
     public Dialog dialog;
+    bool isLoadScene = false;
     private void Awake()
     {
         if (dialog == null)
@@ -42,13 +43,22 @@ public class ChoiceManager : MonoBehaviour
     }
     public void OnButtonYesFirst() 
     {
-        SoundManager.instance.PlaySfx(SoundManager.instance.choiceSelectedClip);
-        GameDataHandler.instance.ClearData();
-        SceneController.instance.LoadSceneIndex(SceneManager.GetActiveScene().buildIndex + 1);
+        if(!isLoadScene)
+        {
+            SoundManager.instance.PlaySfx(SoundManager.instance.choiceSelectedClip);
+            GameDataHandler.instance.ClearData();
+            SceneController.instance.LoadSceneIndex(SceneManager.GetActiveScene().buildIndex + 1);
+            isLoadScene = true;
+        }
+
     }
     public void OnButtonYesSecond()
     {
-        SoundManager.instance.PlaySfx(SoundManager.instance.choiceSelectedClip);
-        SceneController.instance.LoadSceneIndex(SceneManager.GetActiveScene().buildIndex + 1);
+        if(!isLoadScene)
+        {
+            SoundManager.instance.PlaySfx(SoundManager.instance.choiceSelectedClip);
+            SceneController.instance.LoadSceneIndex(SceneManager.GetActiveScene().buildIndex + 1);
+            isLoadScene = true;
+        }
     }
 }
