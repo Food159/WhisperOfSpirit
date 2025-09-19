@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public enum Levelll
 {
-    levelTutorial, levelOne, levelTwo, levelThree, levelBoss
+    levelTutorial, levelOne, levelTwo, levelThree, levelBoss, levelEnding
 }
 public class SoundManager : MonoBehaviour
 {
@@ -22,6 +22,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] public AudioClip bgSecondClip;
     [SerializeField] public AudioClip bgThirdClip;
     [SerializeField] public AudioClip bgBossClip;
+    [SerializeField] public AudioClip bgEndingClip;
 
     [SerializeField] public AudioClip choiceSelectedClip;
     [SerializeField] public AudioClip dialogClip;
@@ -73,13 +74,17 @@ public class SoundManager : MonoBehaviour
         {
             level = Levelll.levelTwo;
         }
-        else if (sceneName == "SceneGameFour")
+        else if (sceneName == "SceneGameFour" || sceneName == "SceneDialogueToGameThree")
         {
             level = Levelll.levelThree;
         }
-        else if (sceneName == "SceneGameShop" || sceneName == "SceneGameBoss" || sceneName == "Hello" || sceneName == "SceneGameBossPhase2")
+        else if (sceneName == "SceneGameShop" || sceneName == "SceneGameBoss" || sceneName == "Hello" || sceneName == "SceneGameBossPhase2" || sceneName == "SceneDialogueToGameFour" || sceneName == "SceneDialogueToGameBoss" || sceneName == "SceneDialogueToGameBossPhase2")
         {
             level = Levelll.levelBoss;
+        }
+        else if(sceneName == "SceneDialogueToGameEnding")
+        {
+            level = Levelll.levelEnding;
         }
         AudioClip targetClip = null;
         switch(level)
@@ -98,6 +103,9 @@ public class SoundManager : MonoBehaviour
                 break;
             case Levelll.levelBoss:
                 targetClip = bgBossClip;
+                break;
+            case Levelll.levelEnding:
+                targetClip = bgEndingClip;
                 break;
         }
         if(bgSource.clip != targetClip)

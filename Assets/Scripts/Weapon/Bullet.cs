@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
             }
             else if (!items.damageIncrese)
             {
-                damage = 20;
+                damage = 320;
             }
             if(items.changeSprite)
             {

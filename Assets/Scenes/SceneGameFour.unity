@@ -10158,6 +10158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winCheck: {fileID: 471241529}
   winPlate: {fileID: 569221191}
+  bossController: {fileID: 0}
   trackCheck: {fileID: 1121405974}
   trackComplete: {fileID: 21300000, guid: 2e71eec02734a2c45b2e20231288de8f, type: 3}
   trackIncomplete: {fileID: 21300000, guid: eee8154be9fd71d4fa17f33a8fb7f6f5, type: 3}
@@ -22733,6 +22734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winCheck: {fileID: 471241529}
   winPlate: {fileID: 569221191}
+  bossController: {fileID: 0}
   trackCheck: {fileID: 1254126934}
   trackComplete: {fileID: 21300000, guid: 2e71eec02734a2c45b2e20231288de8f, type: 3}
   trackIncomplete: {fileID: 21300000, guid: eee8154be9fd71d4fa17f33a8fb7f6f5, type: 3}
@@ -52487,6 +52489,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winCheck: {fileID: 471241529}
   winPlate: {fileID: 569221191}
+  bossController: {fileID: 0}
   trackCheck: {fileID: 718799535}
   trackComplete: {fileID: 21300000, guid: 2e71eec02734a2c45b2e20231288de8f, type: 3}
   trackIncomplete: {fileID: 21300000, guid: eee8154be9fd71d4fa17f33a8fb7f6f5, type: 3}
@@ -58652,6 +58655,7 @@ MonoBehaviour:
   bgSecondClip: {fileID: 8300000, guid: 4c9244767a700e246b65fbdf242ad1c0, type: 3}
   bgThirdClip: {fileID: 8300000, guid: 3bb07b3de73811c4eb497a2109288e40, type: 3}
   bgBossClip: {fileID: 8300000, guid: 529d763cc2f39dd4ba0c24c8352a563e, type: 3}
+  bgEndingClip: {fileID: 8300000, guid: 1631c91c88d2b614ab95d9d04f736a31, type: 3}
   choiceSelectedClip: {fileID: 8300000, guid: 7f251efcfba3b5943b9a078348e6eec3, type: 3}
   dialogClip: {fileID: 8300000, guid: 594a15418baa9a84dab05356eeb5c2e8, type: 3}
   loseClip: {fileID: 8300000, guid: 12772d3a51a817143b862a059e7c6849, type: 3}
