@@ -24,6 +24,7 @@ public class BossController : MonoBehaviour
     public bool rain = false;
     public bool portalGround = false;
     public bool exitToState = false;
+    public bool bossHappy = false;
 
     [Space]
     [Header("GameObject")]

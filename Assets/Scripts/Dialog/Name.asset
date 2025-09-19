@@ -25,3 +25,6 @@ MonoBehaviour:
   - key: Name_???
     englishName: ???
     thaiName: ???
+  - key: Name_CrimsonQueen
+    englishName: CrimsonQueen
+    thaiName: "\u0E01\u0E38\u0E21\u0E32\u0E23\u0E41\u0E14\u0E07"

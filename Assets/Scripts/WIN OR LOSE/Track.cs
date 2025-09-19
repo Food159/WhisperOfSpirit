@@ -12,6 +12,7 @@ public class Track : MonoBehaviour
     [Header("Scripts")]
     [SerializeField] WinCheck winCheck;
     [SerializeField] WinPlate winPlate;
+    [SerializeField] BossController bossController;
 
     [Space]
     [Header("Track 1")]
@@ -50,6 +51,10 @@ public class Track : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+        }
+        if(bossController == null)
+        {
+            bossController = FindAnyObjectByType<BossController>();
         }
     }
     private void Update()
@@ -224,16 +229,16 @@ public class Track : MonoBehaviour
 
             #region track1
             trackText.text = "Defeat Crimson Queen";
-            //if (dead >= total)
-            //{
-            //    trackCheck.sprite = trackComplete;
-            //    trackCompleted = true;
-            //}
-            //else
-            //{
-            //    trackCheck.sprite = trackIncomplete;
-            //    trackCompleted = false;
-            //}
+            if (bossController.bossHappy)
+            {
+                trackCheck.sprite = trackComplete;
+                trackCompleted = true;
+            }
+            else
+            {
+                trackCheck.sprite = trackIncomplete;
+                trackCompleted = false;
+            }
             #endregion track1
         }
     }

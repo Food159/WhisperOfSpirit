@@ -17,6 +17,7 @@ public class BossHappyState : BossState
     }
     public override void Enter()
     {
+        bossInput.bossHappy = true;
         Debug.Log("Hpp");
         anim.Play(animclip.name);
         col2d.enabled = false;

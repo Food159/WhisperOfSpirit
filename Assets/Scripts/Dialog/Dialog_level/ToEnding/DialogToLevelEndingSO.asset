@@ -1,0 +1,165 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d5cce5ae8e7eb4f847db46113f492c, type: 3}
+  m_Name: DialogToLevelEndingSO
+  m_EditorClassIdentifier: 
+  lines:
+  - key: Dialog8_0
+    englishText: 
+    thaiText: 
+  - key: Dialog8_1
+    englishText: 
+    thaiText: 
+  - key: Dialog8_2
+    englishText: 
+    thaiText: 
+  - key: Dialog8_3
+    englishText: 
+    thaiText: 
+  - key: Dialog8_4
+    englishText: 
+    thaiText: 
+  - key: Dialog8_5
+    englishText: 
+    thaiText: 
+  - key: Dialog8_6
+    englishText: 
+    thaiText: 
+  - key: Dialog8_7
+    englishText: 
+    thaiText: 
+  - key: Dialog8_8
+    englishText: 
+    thaiText: 
+  - key: Dialog8_9
+    englishText: 
+    thaiText: 
+  - key: Dialog8_10
+    englishText: 
+    thaiText: 
+  - key: Dialog8_11
+    englishText: 
+    thaiText: 
+  - key: Dialog8_12
+    englishText: 
+    thaiText: 
+  - key: Dialog8_13
+    englishText: 
+    thaiText: 
+  - key: Dialog8_14
+    englishText: 
+    thaiText: 
+  - key: Dialog8_15
+    englishText: 
+    thaiText: 
+  - key: Dialog8_16
+    englishText: 
+    thaiText: 
+  - key: Dialog8_17
+    englishText: 
+    thaiText: 
+  - key: Dialog8_18
+    englishText: 
+    thaiText: 
+  - key: Dialog8_19
+    englishText: 
+    thaiText: 
+  - key: Dialog8_20
+    englishText: 
+    thaiText: 
+  - key: Dialog8_21
+    englishText: 
+    thaiText: 
+  - key: Dialog8_22
+    englishText: 
+    thaiText: 
+  - key: Dialog8_23
+    englishText: 
+    thaiText: 
+  - key: Dialog8_24
+    englishText: 
+    thaiText: 
+  - key: Dialog8_25
+    englishText: 
+    thaiText: 
+  - key: Dialog8_26
+    englishText: 
+    thaiText: 
+  - key: Dialog8_27
+    englishText: 
+    thaiText: 
+  - key: Dialog8_28
+    englishText: 
+    thaiText: 
+  - key: Dialog8_29
+    englishText: 
+    thaiText: 
+  - key: Dialog8_30
+    englishText: 
+    thaiText: 
+  - key: Dialog8_31
+    englishText: 
+    thaiText: 
+  - key: Dialog8_32
+    englishText: 
+    thaiText: 
+  - key: Dialog8_33
+    englishText: 
+    thaiText: 
+  - key: Dialog8_34
+    englishText: 
+    thaiText: 
+  - key: Dialog8_35
+    englishText: 
+    thaiText: 
+  - key: Dialog8_36
+    englishText: 
+    thaiText: 
+  - key: Dialog8_37
+    englishText: 
+    thaiText: 
+  - key: Dialog8_38
+    englishText: 
+    thaiText: 
+  - key: Dialog8_39
+    englishText: 
+    thaiText: 
+  - key: Dialog8_40
+    englishText: 
+    thaiText: 
+  - key: Dialog8_41
+    englishText: 
+    thaiText: 
+  - key: Dialog8_42
+    englishText: 
+    thaiText: 
+  - key: Dialog8_43
+    englishText: 
+    thaiText: 
+  - key: Dialog8_44
+    englishText: 
+    thaiText: 
+  - key: Dialog8_45
+    englishText: 
+    thaiText: 
+  - key: Dialog8_46
+    englishText: 
+    thaiText: 
+  - key: Dialog8_47
+    englishText: 
+    thaiText: 
+  - key: Dialog8_48
+    englishText: 
+    thaiText: 
+  - key: Dialog8_49
+    englishText: 
+    thaiText: 
