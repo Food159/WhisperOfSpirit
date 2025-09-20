@@ -20,12 +20,16 @@ public class DialogToLevelEnding : MonoBehaviour
     public Image imageContinue;
     bool isLoadScene = false;
 
-    //[Header("Image")]
-    //public GameObject oldBG;
-    //public GameObject newBG;
-    //public GameObject daraIMG1;
-    //public GameObject daraIMG2;
-    //public GameObject daraIMG3;
+    [Header("Image")]
+    public GameObject oldBG;
+    public GameObject S06_gamescene;
+    public GameObject Deang_Dialog_angy;
+    public GameObject Dara_Dialog_angy;
+    public GameObject Dara_Dialog_thinking;
+    public GameObject Dara_Dialog_haha;
+    public GameObject Dara_Dialog_no1;
+    public GameObject Dara_Dialog_fine;
+    public GameObject Dara_Dialog_soft;
 
     public bool _isTyping = false;
     public bool _isChoiceFinished = false;

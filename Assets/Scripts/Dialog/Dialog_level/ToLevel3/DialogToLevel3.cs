@@ -20,12 +20,11 @@ public class DialogToLevel3 : MonoBehaviour
     public Image imageContinue;
     bool isLoadScene = false;
 
-    //[Header("Image")]
-    //public GameObject oldBG;
-    //public GameObject newBG;
-    //public GameObject daraIMG1;
-    //public GameObject daraIMG2;
-    //public GameObject daraIMG3;
+    [Header("Image")]
+    public GameObject Dara_Dialog_wow;
+    public GameObject Dara_Dialog_haha;
+    public GameObject Dara_Dialog_fine;
+    public GameObject Dara_Dialog_thinking;
 
     public bool _isTyping = false;
     public bool _isChoiceFinished = false;
@@ -105,6 +104,30 @@ public class DialogToLevel3 : MonoBehaviour
             //{
             //    daraIMG1.SetActive(true);
             //}
+            if(index == 8)
+            {
+                Dara_Dialog_wow.SetActive(true);
+            }
+            if(index == 9) 
+            {
+                Dara_Dialog_wow.SetActive(false);
+                Dara_Dialog_haha.SetActive(true);
+            }
+            if(index == 10)
+            {
+                Dara_Dialog_haha.SetActive(false);
+                Dara_Dialog_fine.SetActive(true);
+            }
+            if(index == 12)
+            {
+                Dara_Dialog_fine.SetActive(false);
+                Dara_Dialog_thinking.SetActive(true);
+            }
+            if(index == 16) 
+            {
+                Dara_Dialog_thinking.SetActive(false);
+                Dara_Dialog_haha.SetActive(true);
+            }
         }
         else
         {

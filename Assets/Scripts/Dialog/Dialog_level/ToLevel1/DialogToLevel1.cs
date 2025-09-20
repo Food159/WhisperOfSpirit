@@ -20,12 +20,16 @@ public class DialogToLevel1 : MonoBehaviour
     public Image imageContinue;
     bool isLoadScene = false;
 
-    //[Header("Image")]
-    //public GameObject oldBG;
-    //public GameObject newBG;
-    //public GameObject daraIMG1;
-    //public GameObject daraIMG2;
-    //public GameObject daraIMG3;
+    [Header("Image")]
+    public GameObject oldBG;
+    public GameObject deangBG1;
+    public GameObject deangBG2;
+    public GameObject Dara_Dialog_haha;
+    public GameObject Dara_Dialog_exited;
+    public GameObject Dara_Dialog_fine;
+    public GameObject Dara_Dialog_angy;
+    public GameObject Dara_Dialog_no1;
+    public GameObject Dara_Dialog_thinking;
 
     public bool _isTyping = false;
     public bool _isChoiceFinished = false;
@@ -105,6 +109,72 @@ public class DialogToLevel1 : MonoBehaviour
             //{
             //    daraIMG1.SetActive(true);
             //}
+            if(index == 1)
+            {
+                Dara_Dialog_haha.SetActive(true);
+            }
+            if(index == 2)
+            {
+                Dara_Dialog_haha.SetActive(false);
+                Dara_Dialog_exited.SetActive(true);
+            }
+            if (index == 3)
+            {
+                Dara_Dialog_exited.SetActive(false);
+                Dara_Dialog_fine.SetActive(true);
+            }
+            if (index == 4)
+            {
+                Dara_Dialog_fine.SetActive(false);
+                Dara_Dialog_haha.SetActive(true);
+            }
+            if (index == 5)
+            {
+                Dara_Dialog_haha.SetActive(false);
+                Dara_Dialog_fine.SetActive(true);
+            }
+            if (index == 6)
+            {
+                Dara_Dialog_fine.SetActive(false);
+                Dara_Dialog_haha.SetActive(true);
+            }
+            if (index == 7)
+            {
+                Dara_Dialog_haha.SetActive(false);
+                oldBG.SetActive(false);
+                deangBG1.SetActive(true);
+            }
+            if(index == 9)
+            {
+                deangBG1.SetActive(false);
+                deangBG2.SetActive(true);
+            }
+            if(index == 10) 
+            {
+                deangBG2.SetActive(false);
+                oldBG.SetActive(true);
+                Dara_Dialog_angy.SetActive(true);
+            }
+            if(index == 12) 
+            {
+                Dara_Dialog_angy.SetActive(false);
+                Dara_Dialog_no1.SetActive(true);
+            }
+            if (index == 14)
+            {
+                Dara_Dialog_no1.SetActive(false);
+                Dara_Dialog_thinking.SetActive(true);
+            }
+            if(index == 17)
+            {
+                Dara_Dialog_thinking.SetActive(false);
+                Dara_Dialog_no1.SetActive(true);
+            }
+            if(index == 25)
+            {
+                Dara_Dialog_no1.SetActive(false);
+                Dara_Dialog_haha.SetActive(true);
+            }
         }
         else
         {

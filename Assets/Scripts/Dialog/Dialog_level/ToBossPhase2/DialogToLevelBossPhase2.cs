@@ -20,12 +20,10 @@ public class DialogToLevelBossPhase2 : MonoBehaviour
     public Image imageContinue;
     bool isLoadScene = false;
 
-    //[Header("Image")]
-    //public GameObject oldBG;
-    //public GameObject newBG;
-    //public GameObject daraIMG1;
-    //public GameObject daraIMG2;
-    //public GameObject daraIMG3;
+    [Header("Image")]
+    public GameObject Deang_Dialog_brag;
+    public GameObject Dara_Dialog_fine;
+    public GameObject Dara_Dialog_haha;
 
     public bool _isTyping = false;
     public bool _isChoiceFinished = false;
@@ -36,6 +34,7 @@ public class DialogToLevelBossPhase2 : MonoBehaviour
     private int index;
     private void Start()
     {
+        Deang_Dialog_brag.SetActive(true);
         SoundManager.instance.PlaySfx(SoundManager.instance.dialogClip);
         LocalizationManager.instance.Load(dialogData);
         LocalizationManager.instance.LoadName(nameData);
@@ -105,6 +104,31 @@ public class DialogToLevelBossPhase2 : MonoBehaviour
             //{
             //    daraIMG1.SetActive(true);
             //}
+            if(index == 4)
+            {
+                Deang_Dialog_brag.SetActive(false);
+                Dara_Dialog_fine.SetActive(true);
+            }
+            if(index == 6)
+            {
+                Dara_Dialog_fine.SetActive(false);
+                Dara_Dialog_haha.SetActive(true);
+            }
+            if (index == 7)
+            {
+                Dara_Dialog_haha.SetActive(false);
+                Dara_Dialog_fine.SetActive(true);
+            }
+            if (index == 8)
+            {
+                Dara_Dialog_fine.SetActive(false);
+                Dara_Dialog_haha.SetActive(true);
+            }
+            if (index == 9)
+            {
+                Dara_Dialog_haha.SetActive(false);
+                Deang_Dialog_brag.SetActive(true);
+            }
         }
         else
         {

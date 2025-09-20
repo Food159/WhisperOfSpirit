@@ -20,12 +20,10 @@ public class DialogToLevelBoss : MonoBehaviour
     public Image imageContinue;
     bool isLoadScene = false;
 
-    //[Header("Image")]
-    //public GameObject oldBG;
-    //public GameObject newBG;
-    //public GameObject daraIMG1;
-    //public GameObject daraIMG2;
-    //public GameObject daraIMG3;
+    [Header("Image")]
+    public GameObject Dara_Dialog_angy;
+    public GameObject Deang_Dialog_fine;
+    public GameObject Deang_Dialog_brag;
 
     public bool _isTyping = false;
     public bool _isChoiceFinished = false;
@@ -36,6 +34,7 @@ public class DialogToLevelBoss : MonoBehaviour
     private int index;
     private void Start()
     {
+        Dara_Dialog_angy.SetActive(true);
         SoundManager.instance.PlaySfx(SoundManager.instance.dialogClip);
         LocalizationManager.instance.Load(dialogData);
         LocalizationManager.instance.LoadName(nameData);
@@ -105,6 +104,25 @@ public class DialogToLevelBoss : MonoBehaviour
             //{
             //    daraIMG1.SetActive(true);
             //}
+            //if(index == 1)
+            //{
+            //    Dara_Dialog_angy.SetActive(true);
+            //}
+            if(index == 1)
+            {
+                Dara_Dialog_angy.SetActive(false);
+                Deang_Dialog_fine.SetActive(true);
+            }
+            if (index == 5)
+            {
+                Deang_Dialog_fine.SetActive(false);
+                Dara_Dialog_angy.SetActive(true);
+            }
+            if(index == 6)
+            {
+                Dara_Dialog_angy.SetActive(false);
+                Deang_Dialog_brag.SetActive(true);
+            }    
         }
         else
         {

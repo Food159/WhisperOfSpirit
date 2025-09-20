@@ -639,7 +639,7 @@ GameObject:
   - component: {fileID: 345548843}
   - component: {fileID: 345548842}
   m_Layer: 5
-  m_Name: BG 2
+  m_Name: BG Deang1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a6ce8386ab172364c9f0108dc1263fb7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f898faad03f98744cad69111be00ab29, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -701,6 +701,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345548840}
+  m_CullTransparentMesh: 1
+--- !u!1 &346566507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 346566508}
+  - component: {fileID: 346566510}
+  - component: {fileID: 346566509}
+  m_Layer: 5
+  m_Name: Dara_Dialog_angy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &346566508
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346566507}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 967195066}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 720, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &346566509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346566507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 69397f9445735124fa73f32be3d974ff, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &346566510
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346566507}
   m_CullTransparentMesh: 1
 --- !u!1 &444771552
 GameObject:
@@ -1279,6 +1354,81 @@ MonoBehaviour:
   minigameWrong: {fileID: 8300000, guid: 3ef4b1131b51830459f70768bcb85ef2, type: 3}
   minigameComplete: {fileID: 8300000, guid: 6ce35109396cf364390baab617a5ab77, type: 3}
   minigameFail: {fileID: 8300000, guid: 575e172a10574d1429dd299a2e3d4883, type: 3}
+--- !u!1 &594170565
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 594170566}
+  - component: {fileID: 594170568}
+  - component: {fileID: 594170567}
+  m_Layer: 5
+  m_Name: Dara_Dialog_no1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &594170566
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594170565}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 967195066}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 720, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &594170567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594170565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 501fd7b2e680cb948b94054c6aad3aa2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &594170568
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594170565}
+  m_CullTransparentMesh: 1
 --- !u!1 &654289012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,7 +1445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &654289013
 Transform:
   m_ObjectHideFlags: 0
@@ -1326,7 +1476,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2042d5b9c297743bb23e1157b9efc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: {fileID: 1688593649}
+  dialog: {fileID: 0}
+  choiceYes1: {fileID: 0}
+  choiceNo1: {fileID: 0}
+  choiceYes2: {fileID: 0}
+  choiceNo2: {fileID: 0}
+  choiceYes3: {fileID: 0}
+  choiceNo3: {fileID: 0}
 --- !u!1 &691291995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1339,7 +1495,7 @@ GameObject:
   - component: {fileID: 691291998}
   - component: {fileID: 691291997}
   m_Layer: 5
-  m_Name: Dara1
+  m_Name: Dara_Dialog_haha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1384,7 +1540,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c19d3e9eb6810694f922f60f627d2362, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d95ac8b29da4c884280e8dd06d4f4250, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1755,6 +1911,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &887708882
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 887708883}
+  - component: {fileID: 887708885}
+  - component: {fileID: 887708884}
+  m_Layer: 5
+  m_Name: Dara_Dialog_thinking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &887708883
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887708882}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 967195066}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 720, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &887708884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887708882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: a2e815fd8893ca849b63bdb5afea15d1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &887708885
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887708882}
+  m_CullTransparentMesh: 1
 --- !u!1 &890506196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,7 +2090,7 @@ GameObject:
   - component: {fileID: 930566510}
   - component: {fileID: 930566509}
   m_Layer: 5
-  m_Name: Dara2
+  m_Name: Dara_Dialog_exited
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1885,7 +2116,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7239a763a6dd2fa45a8b376acb4b5d12, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a775df717d39a1348b66b44c95d179b7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2100,9 +2331,13 @@ RectTransform:
   - {fileID: 82813288}
   - {fileID: 1232847595}
   - {fileID: 345548841}
+  - {fileID: 1872389139}
   - {fileID: 691291996}
   - {fileID: 930566511}
   - {fileID: 1682746228}
+  - {fileID: 346566508}
+  - {fileID: 594170566}
+  - {fileID: 887708883}
   - {fileID: 1529248571}
   - {fileID: 1688593646}
   - {fileID: 139589841}
@@ -2696,7 +2931,7 @@ GameObject:
   - component: {fileID: 1682746227}
   - component: {fileID: 1682746226}
   m_Layer: 5
-  m_Name: Dara3
+  m_Name: Dara_Dialog_fine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2722,7 +2957,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1851095f437a5e44a86feb739cc9b703, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 475ce409377585c4f88f6a176c95df5e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2768,7 +3003,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1688593646}
-  - component: {fileID: 1688593649}
   - component: {fileID: 1688593650}
   - component: {fileID: 1688593648}
   - component: {fileID: 1688593647}
@@ -2840,74 +3074,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1688593645}
   m_CullTransparentMesh: 1
---- !u!114 &1688593649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1688593645}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3f47eadf5e35914db05fd111745bd18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogData: {fileID: 11400000, guid: 31b3a90029d8d0b469a4956c070e7304, type: 2}
-  nameData: {fileID: 11400000, guid: 5438765a6eba76442b0015a75dd41620, type: 2}
-  lineKey:
-  - Dialog1_0
-  - Dialog1_1
-  - Dialog1_2
-  - Dialog1_3
-  - Dialog1_4
-  - Dialog1_5
-  - Dialog1_6
-  - Dialog1_7
-  - Dialog1_8
-  - Dialog1_9
-  - Dialog1_10
-  - Dialog1_11
-  - Dialog1_12
-  - Dialog1_13
-  - Dialog1_14
-  - Dialog1_15
-  - Dialog1_16
-  nameKey:
-  - Name_Narration
-  - Name_Tawan
-  - Name_Tawan
-  - Name_Tawan
-  - Name_Narration
-  - Name_???
-  - Name_Tawan
-  - Name_Narration
-  - Name_???
-  - Name_Narration
-  - Name_Tawan
-  - Name_Dara
-  - Name_Narration
-  - Name_Dara
-  - Name_Narration
-  - Name_Dara
-  - Name_Dara
-  textComponent: {fileID: 1955759099}
-  textNames: {fileID: 444771554}
-  textContinue: {fileID: 200164740}
-  imageContinue: {fileID: 489846435}
-  _isChoice: 0
-  oldBG: {fileID: 1232847594}
-  sakchaiBG: {fileID: 0}
-  newBG: {fileID: 345548840}
-  daraIMG1: {fileID: 691291995}
-  daraIMG2: {fileID: 930566508}
-  daraIMG3: {fileID: 1682746225}
-  Choice_1: {fileID: 1751400197}
-  Choice_2: {fileID: 749489954}
-  Choice_3: {fileID: 794064422}
-  textSpeed: 0.05
-  _isTyping: 0
-  _isChoiceFinished: 0
-  _showNextChoice: 0
 --- !u!114 &1688593650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2981,6 +3147,15 @@ MonoBehaviour:
   textComponent: {fileID: 1955759099}
   textNames: {fileID: 444771554}
   imageContinue: {fileID: 489846435}
+  oldBG: {fileID: 1232847594}
+  deangBG1: {fileID: 345548840}
+  deangBG2: {fileID: 1872389138}
+  Dara_Dialog_haha: {fileID: 691291995}
+  Dara_Dialog_exited: {fileID: 930566508}
+  Dara_Dialog_fine: {fileID: 1682746225}
+  Dara_Dialog_angy: {fileID: 346566507}
+  Dara_Dialog_no1: {fileID: 594170565}
+  Dara_Dialog_thinking: {fileID: 887708882}
   _isTyping: 0
   _isChoiceFinished: 0
   _showNextChoice: 0
@@ -3418,6 +3593,81 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1872389138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872389139}
+  - component: {fileID: 1872389141}
+  - component: {fileID: 1872389140}
+  m_Layer: 5
+  m_Name: BG Deang2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1872389139
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872389138}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 967195066}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1872389140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872389138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 53e9728a4fcdbdf4c820559d75da68c2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1872389141
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872389138}
+  m_CullTransparentMesh: 1
 --- !u!1 &1955759097
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,12 +20,9 @@ public class DialogToLevel2 : MonoBehaviour
     public Image imageContinue;
     bool isLoadScene = false;
 
-    //[Header("Image")]
-    //public GameObject oldBG;
-    //public GameObject newBG;
-    //public GameObject daraIMG1;
-    //public GameObject daraIMG2;
-    //public GameObject daraIMG3;
+    [Header("Image")]
+    public GameObject Dara_Dialog_haha;
+    public GameObject Dara_Dialog_fine;
 
     public bool _isTyping = false;
     public bool _isChoiceFinished = false;
@@ -105,6 +102,15 @@ public class DialogToLevel2 : MonoBehaviour
             //{
             //    daraIMG1.SetActive(true);
             //}
+            if(index == 5)
+            {
+                Dara_Dialog_haha.SetActive(true);
+            }
+            if(index == 6)
+            {
+                Dara_Dialog_haha.SetActive(false);
+                Dara_Dialog_fine.SetActive(true);
+            }
         }
         else
         {
