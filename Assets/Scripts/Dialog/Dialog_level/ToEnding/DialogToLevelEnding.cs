@@ -23,6 +23,12 @@ public class DialogToLevelEnding : MonoBehaviour
     [Header("Image")]
     public GameObject oldBG;
     public GameObject S06_gamescene;
+    public GameObject S07_Tawanhome;
+    public GameObject S07_DarasLore01;
+    public GameObject S07_DarasLore02;
+    public GameObject S07_DarasLore03;
+    public GameObject Op_buildy;
+    public GameObject FinalEndScene;
     public GameObject Deang_Dialog_angy;
     public GameObject Dara_Dialog_angy;
     public GameObject Dara_Dialog_thinking;
@@ -40,6 +46,7 @@ public class DialogToLevelEnding : MonoBehaviour
     private int index;
     private void Start()
     {
+        Deang_Dialog_angy.SetActive(true);
         SoundManager.instance.PlaySfx(SoundManager.instance.dialogClip);
         LocalizationManager.instance.Load(dialogData);
         LocalizationManager.instance.LoadName(nameData);
@@ -109,6 +116,136 @@ public class DialogToLevelEnding : MonoBehaviour
             //{
             //    daraIMG1.SetActive(true);
             //}
+            if(index == 1)
+            {
+                Deang_Dialog_angy.SetActive(false);
+                Dara_Dialog_angy.SetActive(true);
+            }
+            if(index == 3)
+            {
+                Dara_Dialog_angy.SetActive(false);
+                Deang_Dialog_angy.SetActive(true);
+            }
+            if(index == 4)
+            {
+                Deang_Dialog_angy.SetActive(false);
+                Dara_Dialog_angy.SetActive(true);
+            }
+            if (index == 6)
+            {
+                Dara_Dialog_angy.SetActive(false);
+                Deang_Dialog_angy.SetActive(true);
+            }
+            if (index == 7)
+            {
+                Deang_Dialog_angy.SetActive(false);
+                Dara_Dialog_angy.SetActive(true);
+            }
+            if(index == 8) 
+            {
+                Dara_Dialog_angy.SetActive(false);
+                Dara_Dialog_thinking.SetActive(true);
+            }
+            if(index == 10)
+            {
+                Dara_Dialog_thinking.SetActive(false);
+                Dara_Dialog_haha.SetActive(true);
+            }
+            if (index == 11) 
+            {
+                Dara_Dialog_haha.SetActive(false);
+                Deang_Dialog_angy.SetActive(true);
+            }
+            if(index == 16)
+            {
+                Deang_Dialog_angy.SetActive(false);
+                Dara_Dialog_no1.SetActive(true);
+            }
+            if (index == 19) 
+            {
+                Dara_Dialog_no1.SetActive(false);
+                Dara_Dialog_fine.SetActive(true);
+            }
+            if(index == 21)
+            {
+                oldBG.SetActive(false);
+                S06_gamescene.SetActive(true);
+                Dara_Dialog_fine.SetActive(false);
+                Dara_Dialog_soft.SetActive(true);
+            }
+            if(index == 25)
+            {
+                Dara_Dialog_soft.SetActive(false);
+                Dara_Dialog_haha.SetActive(true);
+            }
+            if(index == 26) 
+            {
+                S06_gamescene.SetActive(false);
+                S07_DarasLore01.SetActive(true);
+                Dara_Dialog_haha.SetActive(false);
+            }
+            if(index == 27) 
+            {
+                S07_DarasLore01.SetActive(false);
+                S07_DarasLore02.SetActive(true);
+            }
+            if(index == 29) 
+            {
+                S07_DarasLore02.SetActive(false);
+                S07_DarasLore03.SetActive(true);
+            }
+            if(index == 30)
+            {
+                S07_DarasLore03.SetActive(false);
+                S06_gamescene.SetActive(true);
+                Dara_Dialog_soft.SetActive(true);
+            }
+            if(index == 31)
+            {
+                Dara_Dialog_soft.SetActive(false);
+                Dara_Dialog_haha.SetActive(true);
+            }
+            if(index == 32)
+            {
+                Dara_Dialog_haha.SetActive(false);
+                Dara_Dialog_soft.SetActive(true);
+            }
+            if(index == 36)
+            {
+                Dara_Dialog_soft.SetActive(false);
+                Dara_Dialog_haha.SetActive(true);
+            }
+            if(index == 37)
+            {
+                Dara_Dialog_haha.SetActive(false);
+                Dara_Dialog_soft.SetActive(true);
+            }
+            if(index == 40)
+            {
+                Dara_Dialog_soft.SetActive(false);
+                Dara_Dialog_haha.SetActive(true);
+            }
+            if(index == 42)
+            {
+                Dara_Dialog_haha.SetActive(false);
+                Dara_Dialog_soft.SetActive(true);
+            }
+            if(index == 44)
+            {
+                S06_gamescene.SetActive(false);
+                S07_Tawanhome.SetActive(true);
+                Dara_Dialog_soft.SetActive(false);
+            }
+            if(index == 46)
+            {
+                S07_Tawanhome.SetActive(false);
+                Op_buildy.SetActive(true);
+            }
+            if(index == 47)
+            {
+                Op_buildy.SetActive(false);
+                FinalEndScene.SetActive(true);
+            }
         }
         else
         {

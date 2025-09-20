@@ -82,7 +82,7 @@ public class SoundManager : MonoBehaviour
         {
             level = Levelll.levelBoss;
         }
-        else if(sceneName == "SceneDialogueToGameEnding")
+        else if(sceneName == "SceneDialogueToGameEnding" || sceneName == "SceneDialogueEnding")
         {
             level = Levelll.levelEnding;
         }
